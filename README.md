@@ -1,12 +1,21 @@
 # HydraLens
 
-HydraLens is a small retrieval lab I built while studying the HydraDB paper. It is not an implementation of HydraDB. It is a focused, deterministic demo that makes one idea easy to see:
+HydraLens is a small retrieval lab I built while studying [HydraDB](https://hydradb.com/) and the [HydraDB paper](https://benchmarks.hydradb.com/HydraDB.pdf). It is not an implementation of HydraDB or an official HydraDB project. It is a focused, deterministic demo that makes one idea easy to see:
 
 Semantic similarity is not enough for agent memory once facts can change over time.
 
 A vector search system may retrieve both "I live in NYC" and "I moved to London" because both are relevant. A useful memory system also needs to answer what is true now, what was true then, when the state changed, why it changed, and which evidence supports the answer.
 
 HydraLens turns that into an interactive comparison between three retrieval modes.
+
+## Inspiration
+
+This project is directly inspired by HydraDB's work on memory infrastructure for AI agents:
+
+- [HydraDB website](https://hydradb.com/)
+- [HydraDB paper](https://benchmarks.hydradb.com/HydraDB.pdf)
+
+The paper's framing helped me think about agent memory less as a bag of semantically similar chunks and more as a versioned, queryable state system. HydraLens is my attempt to rebuild the smallest useful version of that mental model: raw memories become enriched chunks, enriched chunks connect to temporal graph edges, and answers are judged by whether they use the right state at the right time.
 
 ## What The Demo Shows
 
